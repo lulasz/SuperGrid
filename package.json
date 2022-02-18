@@ -1,0 +1,20 @@
+{
+    "name": "com.lulasz.supergrid",
+    "version": "0.0.1",
+    "displayName": "SuperGrid",
+    "description": "A great add-on for faster level creation.\nFeatures:\n- Snapping\n- Grid View\n- Additional select box",
+    "keywords": [
+      "editor",
+      "gird",
+      "level",
+      "tools",
+      "utility",
+      "extensions"
+    ],
+    "author": {
+      "name": "Łukasz Majewski",
+      "email": "lukasz.hydragon@gmail.com",
+      "url": "https://github.com/lulasz/SuperGrid"
+    },
+    "unity": "2020.3"
+  }
