@@ -2,7 +2,7 @@
     "name": "com.lulasz.supergrid",
     "version": "0.0.1",
     "displayName": "SuperGrid",
-    "description": "A great add-on for faster level creation.\nFeatures:\n- Snapping\n- Grid View\n- Additional select box",
+    "description": "A great add-on for faster level creation.\n\nFeatures:\n- Snapping\n- Grid View\n- Additional select box",
     "keywords": [
       "editor",
       "gird",
