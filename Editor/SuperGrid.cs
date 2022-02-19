@@ -103,14 +103,20 @@ namespace Lulasz.SuperGrid
                     }
                 }
 
-                // Draw Sprite outline
+                // Draw Render outline
                 if (select)
                 {
                     Handles.color = selectColor;
-                    Handles.DrawLine(p + new Vector3(0.5f, 0f, 0f) + (-Vector3.forward / 2f), p + new Vector3(0.5f, 0f, 0f) + (Vector3.forward / 2f), lineSize * 6);
-                    Handles.DrawLine(p + new Vector3(-0.5f, 0f, 0f) + (-Vector3.forward / 2f), p + new Vector3(-0.5f, 0f, 0f) + (Vector3.forward / 2f), lineSize * 6);
-                    Handles.DrawLine(p + new Vector3(0f, 0f, 0.5f) + (Vector3.right / 2f), p + new Vector3(0f, 0f, 0.5f) + (-Vector3.right / 2f), lineSize * 6);
-                    Handles.DrawLine(p + new Vector3(0f, 0f, -0.5f) + (Vector3.right / 2f), p + new Vector3(0f, 0f, -0.5f) + (-Vector3.right / 2f), lineSize * 6);
+
+                    Renderer r = null;
+                    if (Selection.activeTransform.TryGetComponent<Renderer>(out r))
+                    {
+                        Vector3 center = r.bounds.center;
+                        Vector3 size = r.bounds.size;
+
+                        // Main box
+                        Handles.DrawWireCube(center, size);
+                    }
                 }
             }
         }
